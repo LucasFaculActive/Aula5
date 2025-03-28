@@ -1,0 +1,54 @@
+// Esse é um código para calcular o fatorial de um número. Aqui vai o código.
+
+// A função calcularFatorial recebe um número e vai fazendo o cálculo.
+public class Fatorial {
+
+    public static int calcularFatorial(int n) {
+        // A gente começa com o resultado como 1, porque qualquer número multiplicado por 1 não muda, e vai multiplicando.
+        int resultado = 1;
+
+        // Esse for é tipo, uma contagem de 2 até o número que a gente quer calcular o fatorial. 
+        // Por exemplo, se for 5, vai de 2 até 5. Vai multiplicando o resultado.
+        for (int i = 2; i <= n; i++) {
+            resultado *= i; // Aqui a gente vai multiplicando o resultado com o i
+        }
+
+        // No final, o resultado vai ser o fatorial. Tipo, se a gente mandou 5, vai retornar 120.
+        return resultado;
+    }
+
+    public static void main(String[] args) {
+        // Aqui, a gente coloca o número que quer calcular o fatorial. Eu coloquei 5 pra testar.
+        int numero = 5;
+
+        // Aí ele imprime o fatorial. Vai aparecer "Fatorial de 5 é 120" no console.
+        System.out.println("Fatorial de " + numero + " é " + calcularFatorial(numero));
+    }
+}
+
+
+// Esse é outro código, bem simples, que soma os elementos de um array de números. Eu usei um array de 1 a 5 pra testar, mas você pode colocar qualquer número.
+
+public class SomaArray {
+
+    public static int soma(int[] numeros) {
+        // Aqui a gente vai guardar a soma, e começa com 0, porque é a soma inicial.
+        int soma = 0;
+
+        // Esse for é tipo uma varredura em cada número do array. Vai pegando um número e somando à variável soma.
+        for (int num : numeros) {
+            soma += num; // A cada vez que passa no laço, soma o número à soma.
+        }
+
+        // No final, retorna a soma total.
+        return soma;
+    }
+
+    public static void main(String[] args) {
+        // Aqui a gente define o array. Eu coloquei 1, 2, 3, 4, 5 só como exemplo, mas você pode colocar o que quiser.
+        int[] array = {1, 2, 3, 4, 5};
+
+        // Aí ele imprime a soma total dos números. Vai aparecer "Soma dos elementos: 15".
+        System.out.println("Soma dos elementos: " + soma(array));
+    }
+}
